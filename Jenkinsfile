@@ -88,13 +88,13 @@ pipeline {
                 stage("Ansible Galaxy") {
                     steps {
                         echo '### Ansible Galaxy Installing Requirements ###'
-                        sh "ansible-galaxy install -r .applier/requirements.yml --roles-path=.openshift-applier/roles"
+                        sh "ansible-galaxy install -r .applier/requirements.yml --roles-path=.applier/roles"
                     }
                 }
                 stage("Apply Inventory using Ansible-Playbook") {
                     steps {
                         echo '### Apply Inventory using Ansible-Playbook ###'
-                        sh "ansible-playbook .openshift-applier/apply.yml -i .applier/inventory/ -e 'include_tags=build'"
+                        sh "ansible-playbook .applier/apply.yml -i .applier/inventory/ -e 'include_tags=build'"
                     }
                 }
             }
