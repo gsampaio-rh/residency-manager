@@ -55,14 +55,14 @@ openshift_cluster_content:
       - build
   - name: deployment
     template: '{{ inventory_dir }}/../templates/deploy.yml'
-    params_from_vars: '{{ deploy_vars }}'
+    params_from_vars: '{{ dev_vars }}'
     namespace: '{{ dev_namespace }}'
     tags:
       - deploy
       - dev
   - name: deployment
     template: '{{ inventory_dir }}/../templates/deploy.yml'
-    params_from_vars: '{{ deploy_vars }}'
+    params_from_vars: '{{ test_vars }}'
     namespace: '{{ test_namespace }}'
     tags:
       - deploy
