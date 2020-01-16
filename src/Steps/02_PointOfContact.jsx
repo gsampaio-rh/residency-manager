@@ -36,7 +36,7 @@ const PointOfContact = () => {
           />
           <InputGroupText
             component="label"
-            htmlFor="residency-duration"
+            htmlFor="engagement-lead-email"
           >
             <EnvelopeIcon />
           </InputGroupText>
@@ -93,7 +93,7 @@ const PointOfContact = () => {
       <FormGroup
          label="Customer Contact"
          isRequired
-         fieldId="tech-lead"
+         fieldId="customer-contact"
          helperText="Who is the main point of contact for the customer?"
       >
         <InputGroup
@@ -111,7 +111,7 @@ const PointOfContact = () => {
             name="customer-contact-name"
             id="customer-contact-name"
             type="text"
-            aria-label="Tech lead name"
+            aria-label="Customer contact name"
             placeholder="Name"
           />
           <InputGroupText
