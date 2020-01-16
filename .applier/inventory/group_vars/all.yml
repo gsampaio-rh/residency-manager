@@ -16,7 +16,19 @@ pipeline_vars:
   PIPELINE_SOURCE_REPOSITORY_REF: master
   NAME: '{{ app_name }}'
 
-deploy_vars:
+dev_vars:
+  NAME: '{{ app_name }}'
+  IMAGE_NAME: '{{ app_name }}'
+  IMAGE_TAG: latest
+  BASE_URL: https://[my-application-url].com/
+  BACKEND_URL: https://[my-application-backend-url].com/
+  CLIENT_ID: open-management-portal
+  AUTHORIZATION_ENDPOINT: https://[my-sso-url].com/auth/realms/omp/protocol/openid-connect/auth
+  USERINFO_ENDPOINT: https://[my-sso-url].com/auth/realms/omp/protocol/openid-connect/userinfo
+  TOKEN_ENDPOINT: https://[my-sso-url].com/auth/realms/omp/protocol/openid-connect/token
+  END_SESSION_ENDPOINT: https://[my-sso-url].com/auth/realms/omp/protocol/openid-connect/logout
+
+test_vars:
   NAME: '{{ app_name }}'
   IMAGE_NAME: '{{ app_name }}'
   IMAGE_TAG: latest
